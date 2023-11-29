@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spots Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        class Spot {
+            constructor(center, radius) {
+                this._center = center;
+                this._radius = radius;
+                this._delta_x = (Math.random() * 0.01) - 0.005;
+                this._delta_y = (Math.random() * 0.01) - 0.005;
+            }
+
+            center() {
+                return this._center;
+            }
+
+            radius() {
+                return this._radius;
+            }
+
+            move() {
+                const [x, y] = this._center;
+                this._center = [x + this._delta_x, y + this._delta_y];
+            }
+
+            contains(point) {
+                const [px, py] = point;
+                const [cx, cy] = this._center;
+                return Math.sqrt((px - cx) ** 2 + (py - cy) ** 2) <= this._radius;
+            }
+        }
+
+        class SpotsState {
+            constructor() {
+                this._spots = [];
+            }
+
+            all_spots() {
+                return this._spots;
+            }
+
+            handle_click(click_point) {
+                for (let i = this._spots.length - 1; i >= 0; i--) {
+                    const spot = this._spots[i];
+                    if (spot.contains(click_point)) {
+                        this._spots.splice(i, 1);
+                        return;
+                    }
+                }
+                this._spots.push(new Spot(click_point, 0.05));
+            }
+
+            move_all_spots() {
+                for (const spot of this._spots) {
+                    spot.move();
+                }
+            }
+        }
+
+        let spotsState;
+
+        function setup() {
+            createCanvas(600, 600);
+            spotsState = new SpotsState();
+        }
+
+        function draw() {
+            background(255, 255, 0);
+            drawSpots();
+            moveSpots();
+        }
+
+        function mousePressed() {
+            spotsState.handle_click([mouseX / width, mouseY / height]);
+        }
+
+        function drawSpots() {
+            for (const spot of spotsState.all_spots()) {
+                drawSpot(spot);
+            }
+        }
+
+        function drawSpot(spot) {
+            const [frac_x, frac_y] = spot.center();
+            const topleft_frac_x = frac_x - spot.radius();
+            const topleft_frac_y = frac_y - spot.radius();
+
+            const frac_width = spot.radius() * 2;
+            const frac_height = spot.radius() * 2;
+
+            const topleft_pixel_x = topleft_frac_x * width;
+            const topleft_pixel_y = topleft_frac_y * height;
+
+            ellipse(
+                topleft_pixel_x + spot.radius() * width,
+                topleft_pixel_y + spot.radius() * height,
+                frac_width * width,
+                frac_height * height
+            );
+        }
+
+        function moveSpots() {
+            spotsState.move_all_spots();
+        }
+    </script>
+</body>
+</html>
