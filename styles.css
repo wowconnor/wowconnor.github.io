@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    text-align: center;
+    text-align: left;
     padding: 2rem;
 }
 
@@ -26,6 +26,7 @@ header h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     margin: 0;
+    display: inline-block;
 }
 
 header h2 {
@@ -34,12 +35,14 @@ header h2 {
     font-size: 1.25rem;
     text-transform: lowercase;
     margin: 0;
+    display: inline-block; 
+    margin-left: 10px;
 
 }
 
 nav {
     background-color: #000;
-    text-align: center;
+    text-align: right;
     padding: 1rem;
 }
 
@@ -58,15 +61,15 @@ nav a {
     text-decoration: none;
     font-size: 16.6663rem;
     transition: color 0.3s ease;
+    opacity: 1;
 }
 
 nav a:hover {
-    color: #fff; /* Hover color */
     opacity: 1;
 }
 
 nav a:not(:hover) {
-    opacity: 0.2; /* Opacity for non-hovered items */
+    opacity: 0.2;
 }
 
 main {
