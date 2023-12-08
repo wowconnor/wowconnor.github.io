@@ -56,6 +56,13 @@ a:hover {
     text-decoration: none;
 }
 
+.project-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* This property controls how the image is resized to fit its box */
+}
+
+
 .project-card a:hover {
     text-decoration: underline;
 }
