@@ -1,5 +1,5 @@
 body {
-    font-family: 'FreeMono', monospace;
+    font-family: 'Agrandir Grand', monospace;
     margin: 0;
     padding: auto;
 }
@@ -13,7 +13,7 @@ body {
 
 header {
     background-color: #333;
-    color:#fff;
+    color:#FF89A9;
     text-align: center;
     padding: 1rem;
 }
@@ -22,6 +22,7 @@ header h1 {
     font-family: 'SpriteGraffiti';
     color: #E4E2DD;
     margin: 0;
+    font-size: 8;
 }
 
 header p{
