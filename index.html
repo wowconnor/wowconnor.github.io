@@ -2,110 +2,58 @@
 
 <!--root element-->
 <html lang = 'en'>
-    <!-- contains meta-information about the document, such as character set, viewport settings, and the title of the page-->
     <head>
-        <!---->
+        <!--character set, viewport settings-->
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-
         <!--Title of the webpage-->
         <title>Connor Marks</title>
-
         <!--CSS integration-->
         <link rel="stylesheet" href="styles.css">
-
-        <!--Javascript: Smooth Scrolling-->
-        <script>
-            document.querySelectorAll('a[href^="#"]').forEach(anchor=> {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        </script>
-
-
     </head>
 
         <!--Body of the website-->
     <body>
 
+        <!--Header-->
+        <header>
+            <h1>Connor<br>Marks</h1>
+            <h2>Software Developer</h2>
+        </header>
+
         <!--Navigation Bar-->
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
 
-        <!--Header-->
-        <header>
-            <h1>Connor Marks</h1>
-            <p>Software Developer</p>
-        </header>
+        <!--Main-->
+        <main>
+            <!--About Me Section-->
+            <section id="about">
+                
+            </section>
 
-        <!--About Me Section-->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a beginner software developer and I study computer science at University of California, Irvine.</p>
-        </section>
+            <!--Project Section-->
+            <section id="projects">
 
-        <!--Project Section-->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <img src = 'resources/pictures/Eo_circle_blue_number-1.svg.png' alt="Project 1 Image" width="300" height = "300">
-                <h3>Project 1</h3>
-                <a href="#">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src = 'resources/pictures/Eo_circle_blue_number-2.svg.png' alt="Project 2 Image" width="300" height = "300">
-                <h3>Project 2</h3>
-                <a href="#">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src = 'resources/pictures/Eo_circle_blue_white_number-3.svg.png' alt="Project 2 Image" width="300" height = "300">
-                <h3>Project 3</h3>
-                <a href="#">View Project</a>
-            </div>
-        </section>
+            </section>
 
-        <!--Contact Section-->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: connormarks100@gmail.com</p>
-            <p>LinkedIn: https://linkedin.com/in/connormarks</p>
-            <p>GitHub: https://github.com/wowconnor</p>
-        </section>
+            <!--Skills Section-->
+            <section id="skills">
 
-        <!--Education Section-->
-        <section id="education">
-            <h2>Education</h2>
-            <p>Degree in Computer Science - University of California, Irvine, 2025</p>
-        </section>
+            </section>
+            
+            <!--Contact Section-->
+            <section id="contact">
 
-        <!--Skills Section-->
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming Languages: Python, Java, JavaScript, C++, MATLAB, Visual Basic, C#</li>
-                <li>Web Development: HTML, CSS, React</li>
-                <li>Databases: MySQL, MongoDB</li>
-            </ul>
-        </section>
-
+            </section>
+        </main>
 
     </body>
-
-
-
-
-
-
 
 </html>

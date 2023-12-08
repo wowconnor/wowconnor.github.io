@@ -1,99 +1,46 @@
-
 @font-face {
-    font-family: 'SpriteGraffiti';
-    src: url('resources/fonts/SpriteGraffiti-Regular.woff2') format('woff2');
+    font-family: 'Arimo';
+    src: url('resources/fonts/Arimo-Regular.ttf') format('truetype');
 }
-
 @font-face {
-    font-family: 'AgrandirGrandBold';
-    src: url('resources/fonts/agrandir-grand-bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'AkrobatRegular';
-    src: url('resources/fonts/Akrobat-Regular.woff2') format('woff2');
-}
-
-
-header {
-    font-family: 'AgrandirGrandBold';
-    background-color: #333;
-    color:#FF89A9;
-    text-align: center;
-    padding: 3rem;
-}
-
-header h1 {
-    font-family: 'SpriteGraffiti';
-    color: #E4E2DD;
-    margin: 0;
-    font-size: 8rem;
+    font-family: 'ArimoBold';
+    src: url('resources/fonts/Arimo-Bold.ttf') format('truetype');
 }
 
 
 body {
-    font-family: 'AkrobatRegular';
+    background-color: #000;
+    color: #fff;
     margin: 0;
-    padding: auto;
-}
-
-
-section {
-    margin: 2rem;
-}
-
-h2 {
-    color: #333;
-}
-
-ul {
-    list-style-type: none;
     padding: 0;
+    font-family: 'ArimoBold', sans-serif;
 }
 
-p {
-    line-height: 1.6;
+header {
+    text-align: center;
+    padding: 2rem;
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
+header h1 {
+    font-family: 'Arimo', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+header h2 {
+    font-family: 'Arimo', sans-serif;
+    color: #ADADAD;
+    font-size: 1.25rem;
+    text-transform: lowercase;
+    margin: 0;
 
-.project-card {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.project-card h3 {
-    color: #333;
-}
-
-.project-card a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.project-card img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover; /* This property controls how the image is resized to fit its box */
-}
-
-
-.project-card a:hover {
-    text-decoration: underline;
 }
 
 nav {
-    background-color: #333;
-    padding: 1rem;
+    background-color: #000;
     text-align: center;
+    padding: 1rem;
 }
 
 nav ul {
@@ -109,19 +56,23 @@ nav li {
 nav a {
     color: #fff;
     text-decoration: none;
+    font-size: 16.6663rem;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #fff; /* Hover color */
+    opacity: 1;
 }
 
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        text-align: left;
-    }
+nav a:not(:hover) {
+    opacity: 0.2; /* Opacity for non-hovered items */
+}
 
-    nav li {
-        margin-bottom: 0.5rem;
-    }
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
 }
