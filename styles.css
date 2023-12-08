@@ -4,6 +4,13 @@ body {
     padding: auto;
 }
 
+@font-face {
+    font-family: 'SpriteGraffiti';
+    src: url('resources/fonts/SpriteGraffiti-Regular.woff2') format('woff2');
+    /* Add more src declarations for additional file formats if needed */
+}
+
+
 header {
     background-color: #333;
     color:#fff;
@@ -12,7 +19,13 @@ header {
 }
 
 header h1 {
-    margin:0;
+    font-family: 'SpriteGraffiti';
+    color: #E4E2DD;
+    margin: 0;
+}
+
+header p{
+    color: #FF89A9;
 }
 
 section {
