@@ -40,22 +40,28 @@ header h2 {
 
 }
 
+/*the navigation container element.*/
 nav {
     background-color: #000;
     text-align: right;
+    display: inline-block;
 }
 
+/*group of navigation items.*/
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: inline-block;
 }
 
+/*a list item within the navigation list*/
 nav li {
     margin-right: 1rem;
     margin-bottom: 0.3rem;
     display: inline-block;
 }
 
+/* the clickable area for each navigation item*/
 nav a {
     color: #fff;
     text-decoration: none;
@@ -65,13 +71,11 @@ nav a {
     display: inline-block;
 }
 
-nav li:hover a,
-nav li a:focus {
+nav li:hover a {
     opacity: 1; /* Hovered or focused item remains at full opacity */
 }
 
-nav li:not(:hover) a,
-nav li:not(:focus) a {
+nav li:not(:hover) a {
     opacity: 0.2; /* Non-hovered or non-focused items go to 20% opacity */
 }
 
