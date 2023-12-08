@@ -11,39 +11,67 @@
         <!--Title of the webpage-->
         <title>Connor Marks - Software Developer</title>
 
+        <!--CSS integration-->
         <link rel="stylesheet" href="styles.css">
+
+        <!--Javascript: Smooth Scrolling-->
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor=> {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+
 
     </head>
 
         <!--Body of the website-->
     <body>
 
+        <!--Navigation Bar-->
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+
+        <!--Header-->
         <header>
             <h1>Connor Marks</h1>
             <p>Software Developer</p>
         </header>
 
         <!--About Me Section-->
-        <section>
+        <section id="about">
             <h2>About Me</h2>
             <p>I am a beginner software developer and I study computer science at University of California, Irvine.</p>
         </section>
 
         <!--Project Section-->
-        <section>
+        <section id="projects">
             <h2>Projects</h2>
             <div class="project-card">
+                <img src = 'resources/Eo_circle_blue_number-1.svg.png' alt="Project 1 Image"
                 <h3>Project 1</h3>
                 <a href="#">View Project</a>
             </div>
             <div class="project-card">
+                <img src = 'resources/Eo_circle_blue_number-2.svg.png' alt="Project 2 Image"
                 <h3>Project 2</h3>
                 <a href="#">View Project</a>
             </div>
         </section>
 
         <!--Contact Section-->
-        <section>
+        <section id="contact">
             <h2>Contact</h2>
             <p>Email: connormarks100@gmail.com</p>
             <p>LinkedIn: https://linkedin.com/in/connormarks</p>
@@ -51,13 +79,13 @@
         </section>
 
         <!--Education Section-->
-        <section>
+        <section id="education">
             <h2>Education</h2>
             <p>Degree in Computer Science - University of California, Irvine, 2025</p>
         </section>
 
         <!--Skills Section-->
-        <section>
+        <section id="skills">
             <h2>Skills</h2>
             <ul>
                 <li>Programming Languages: Python, Java, JavaScript, C++, MATLAB, Visual Basic, C#</li>
