@@ -36,7 +36,7 @@ header h2 {
     text-transform: lowercase;
     margin: 0;
     display: inline-block; 
-    margin-left: 10px;
+    margin-left: 20px;
 
 }
 
@@ -52,7 +52,7 @@ nav ul {
 }
 
 nav li {
-    display: inline;
+    margin-bottom: 1rem;
     margin-right: 1rem;
 }
 
