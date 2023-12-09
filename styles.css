@@ -65,17 +65,21 @@ nav a {
     transition: color 0.3s ease;
     opacity: 1;
     display: block;
-
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     opacity: 1;
     display: block;
 }
 
-nav li:not(:hover) a {
+nav li:not(:focus) a {
     opacity: 0.2; /* Non-hovered items go to 20% opacity */
     display: block;
+}
+
+nav li:not(:hover) a {
+    opacity: 1;
 }
 
 main {
