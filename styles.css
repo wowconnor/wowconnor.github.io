@@ -67,6 +67,15 @@ nav a {
     display: block;
 }
 
+nav li a {
+    opacity: 1;
+    transition: opacity 0.3s ease; /* Add a transition for a smoother effect */
+}
+
+nav li:hover a {
+    opacity: 1;
+}
+
 nav a:hover {
     opacity: 1;
     
@@ -74,6 +83,10 @@ nav a:hover {
 
 nav li:not(:hover) a {
     opacity: .2;
+}
+
+nav:hover li a {
+    opacity: 1;
 }
 
 main {
