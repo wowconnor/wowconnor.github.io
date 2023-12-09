@@ -53,6 +53,7 @@ nav ul {
 
 nav li {
     margin-right: 1rem;
+    display: block; 
 
 }
 
@@ -62,7 +63,7 @@ nav a {
     font-size: 15rem;
     transition: color 0.3s ease;
     opacity: 1;
-    display: block;
+    display: inline-block;
 
 }
 
