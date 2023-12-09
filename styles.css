@@ -45,6 +45,7 @@ nav {
     text-align: right;
     margin-top: 2rem;
     margin-top: 0;
+    display: block;
 }
 
 nav ul {
@@ -66,6 +67,7 @@ nav a {
     transition: color 0.3s ease;
     opacity: 1;
     display: block;
+    padding-right: 0.5rem;
 
 }
 
