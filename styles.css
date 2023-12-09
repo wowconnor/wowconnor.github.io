@@ -43,14 +43,16 @@ header h2 {
 nav {
     background-color: #000;
     text-align: right;
-    margin-top: 2rem;
     margin-top: 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
 }
 
 nav li {
