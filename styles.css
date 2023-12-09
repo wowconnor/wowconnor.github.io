@@ -43,16 +43,17 @@ header h2 {
 nav {
     background-color: #000;
     text-align: right;
+    margin-top:5rem
 }
 
 nav ul {
     list-style-type: none;
-    padding: 3rem 0;
+    padding: 1rem;
 }
 
 nav li {
     margin-right: 2rem;
-    margin-bottom: 0.5rem; /* Adjust the margin to reduce spacing above and below */
+    margin-bottom: 0rem; /* Adjust the margin to reduce spacing above and below */
     display: block;
     padding: 0.5rem;
 }
@@ -74,8 +75,7 @@ nav li:hover a::after {
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0; /* Set initial opacity to 0 */
-    transition: opacity 0.3s ease;
+    opacity: .2; /* Set initial opacity to 0 */
 }
 
 nav li:hover a::after,
@@ -85,7 +85,7 @@ nav li a:focus::after {
 
 nav li:not(:hover) a::after,
 nav li:not(:focus) a::after {
-    opacity: 0; /* Non-hovered or non-focused items have pseudo-element at 0 opacity */
+    opacity: .2; /* Non-hovered or non-focused items have pseudo-element at 0 opacity */
 }
 
 main {
