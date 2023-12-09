@@ -74,12 +74,12 @@ nav a:focus {
 }
 
 nav li:not(:focus) a {
-    opacity: 0.2; /* Non-hovered items go to 20% opacity */
+    opacity: 1; /* Non-hovered items go to 20% opacity */
     display: block;
 }
 
 nav li:not(:hover) a {
-    opacity: 1;
+    opacity: .2;
 }
 
 main {
