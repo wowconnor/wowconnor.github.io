@@ -51,9 +51,10 @@ nav ul {
 }
 
 nav li {
-    margin-right: 1rem;
+    margin-right: 2rem;
     margin-bottom: 0.5rem; /* Adjust the margin to reduce spacing above and below */
-    display: inline-block;
+    display: block;
+    padding: 0.5rem;
 }
 
 nav a {
@@ -62,14 +63,29 @@ nav a {
     font-size: 15rem;
     transition: color 0.3s ease;
     opacity: 1;
+    display: block;
+    position: relative;
 }
 
-nav a:hover {
-    opacity: 1;
+nav li:hover a::after {
+    content: ""; /* Create a pseudo-element to cover the full clickable area */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0; /* Set initial opacity to 0 */
+    transition: opacity 0.3s ease;
 }
 
-nav li:not(:hover) a {
-    opacity: 0.2; /* Non-hovered items go to 20% opacity */
+nav li:hover a::after,
+nav li a:focus::after {
+    opacity: 1; /* Hovered or focused item remains at full opacity */
+}
+
+nav li:not(:hover) a::after,
+nav li:not(:focus) a::after {
+    opacity: 0; /* Non-hovered or non-focused items have pseudo-element at 0 opacity */
 }
 
 main {
