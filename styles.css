@@ -43,19 +43,17 @@ header h2 {
 nav {
     background-color: #000;
     text-align: right;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 3rem 0;
+    padding: 0;
 }
 
 nav li {
-    margin-right: 2rem;
-    margin-bottom: 0.5rem; /* Adjust the margin to reduce spacing above and below */
-    display: block;
-    padding: 0.5rem;
+    margin-right: 1rem;
+
 }
 
 nav a {
@@ -65,14 +63,14 @@ nav a {
     transition: color 0.3s ease;
     opacity: 1;
     display: block;
+
 }
 
-nav a:hover, 
-nav a:focus{
+nav a:hover {
     opacity: 1;
 }
 
-nav li:not(:focus) a {
+nav li:not(:hover) a {
     opacity: 0.2; /* Non-hovered items go to 20% opacity */
 }
 
