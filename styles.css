@@ -85,9 +85,7 @@ nav li:not(:hover) a {
     opacity: .2;
 }
 
-nav:hover li a {
-    opacity: 1;
-}
+
 
 main {
     padding: 2rem;
