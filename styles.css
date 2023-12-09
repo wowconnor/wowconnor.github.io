@@ -43,17 +43,17 @@ header h2 {
 nav {
     background-color: #000;
     text-align: right;
-    margin-top:5rem
+    margin-top: 4rem;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 1rem;
+    padding: 3rem 0;
 }
 
 nav li {
     margin-right: 2rem;
-    margin-bottom: 0rem; /* Adjust the margin to reduce spacing above and below */
+    margin-bottom: 0.5rem; /* Adjust the margin to reduce spacing above and below */
     display: block;
     padding: 0.5rem;
 }
@@ -65,27 +65,15 @@ nav a {
     transition: color 0.3s ease;
     opacity: 1;
     display: block;
-    position: relative;
 }
 
-nav li:hover a::after {
-    content: ""; /* Create a pseudo-element to cover the full clickable area */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: .2; /* Set initial opacity to 0 */
+nav a:hover, 
+nav a:focus{
+    opacity: 1;
 }
 
-nav li:hover a::after,
-nav li a:focus::after {
-    opacity: 1; /* Hovered or focused item remains at full opacity */
-}
-
-nav li:not(:hover) a::after,
-nav li:not(:focus) a::after {
-    opacity: .2; /* Non-hovered or non-focused items have pseudo-element at 0 opacity */
+nav li:not(:focus) a {
+    opacity: 0.2; /* Non-hovered items go to 20% opacity */
 }
 
 main {
