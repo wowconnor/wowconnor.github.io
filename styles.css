@@ -47,11 +47,13 @@ nav {
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 3rem 0;
 }
 
 nav li {
     margin-right: 1rem;
+    margin-bottom: 0.5rem; /* Adjust the margin to reduce spacing above and below */
+    display: inline-block;
 }
 
 nav a {
