@@ -49,10 +49,12 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 0;
 }
 
 nav li {
     margin-right: 1rem;
+    margin-top: 0;
     display: block;
     padding: 0;
 
@@ -65,10 +67,12 @@ nav a {
     transition: color 0.3s ease;
     opacity: 1;
     display: block;
+    margin-top: 0;
 }
 
 nav li a {
     opacity: 1;
+    margin-top: 0;
     transition: opacity 0.3s ease; /* Add a transition for a smoother effect */
 }
 
