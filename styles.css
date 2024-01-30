@@ -62,14 +62,14 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-size: 15rem;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
     opacity: 1;
     display: block;
 }
 
 nav li a {
     opacity: 1;
-    transition: opacity 0.3s ease; /* Add a transition for a smoother effect */
+    transition: opacity 0.5s ease; /* Add a transition for a smoother effect */
 }
 
 nav li:hover a {
@@ -84,6 +84,34 @@ nav a:hover {
 nav li:not(:hover) a {
     opacity: .2;
 }
+
+/* Add this to your existing CSS */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-image {
+    width: 150px; /* Adjust the width according to your preference */
+    border-radius: 50%; /* Makes the image circular; adjust as needed */
+    margin-right: 1rem;
+}
+
+.description {
+    flex: 1;
+}
+
+.description p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ADADAD;
+}
+
+/* Adjust other styles as needed */
+
 
 
 
